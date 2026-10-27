@@ -1,0 +1,243 @@
+.cell {
+  background: #fff;
+  border: 1px solid #e7e7ee;
+  border-radius: 14px;
+  padding: 6px;
+  min-height: 94px;
+  position: relative;
+  transition: box-shadow 0.15s, background 0.15s, transform 0.1s;
+  cursor: default;
+  user-select: none;
+  -webkit-user-select: none;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.cell:hover {
+  border-color: #d0d0e0;
+}
+
+.cell.today {
+  border-color: #6c63ff;
+  background: #faf9ff;
+  box-shadow: 0 0 0 1px #6c63ff22;
+}
+
+.cell.selected {
+  background: #eeeaff;
+  border-color: #6c63ff;
+  box-shadow: 0 0 0 2px #6c63ff44;
+}
+
+.cell.dropOver {
+  background: #f0fff4;
+  border-color: #4ecdc4;
+  box-shadow: 0 0 0 2px #4ecdc444;
+  transform: scale(1.02);
+}
+
+.cell.selectionMode {
+  cursor: pointer;
+}
+
+.cell.selectionMode:active {
+  transform: scale(0.97);
+}
+
+/* Üst Başlık Satırı */
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+  flex-shrink: 0;
+}
+
+.dayNum {
+  font-size: 13px;
+  font-weight: 700;
+  color: #333;
+  line-height: 1;
+}
+
+.todayNum {
+  color: #fff;
+  background: #6c63ff;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  box-shadow: 0 2px 6px rgba(108, 99, 255, 0.4);
+}
+
+.topActions {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+/* 24 Saatlik Program İkon Butonu */
+.timelineIconBtn {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: none;
+  background: transparent;
+  color: #888;
+  font-size: 11px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: all 0.15s;
+}
+
+.timelineIconBtn:hover {
+  background: #eef0ff;
+  color: #6c63ff;
+}
+
+.timelineIconBtn:active {
+  transform: scale(0.9);
+}
+
+.addBtn {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: none;
+  background: transparent;
+  color: #aaa;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.15s, background 0.15s;
+}
+
+.addBtn:hover {
+  background: #f0f0f5;
+  color: #6c63ff;
+}
+
+.addBtn:active {
+  transform: scale(0.9);
+}
+
+.checkmark {
+  font-size: 13px;
+  color: #6c63ff;
+  font-weight: 700;
+}
+
+/* İçerik Listesi */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.content::-webkit-scrollbar {
+  display: none;
+}
+
+/* Etkinlik Çipi & Tik Butonu */
+.eventChip {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 4px;
+  border-radius: 6px;
+  font-size: 10px;
+  background: #f3f3fb;
+  border-left: 2.5px solid #6c63ff;
+  transition: opacity 0.15s;
+  overflow: hidden;
+}
+
+.eventChip.completed {
+  opacity: 0.45;
+  background: #f5f5f5;
+  border-left-color: #10b981;
+}
+
+.tickBox {
+  width: 13px;
+  height: 13px;
+  border-radius: 3px;
+  border: 1px solid currentColor;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  font-weight: 900;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.tickBox.checked {
+  background: #10b981;
+  border-color: #10b981;
+  color: #fff;
+}
+
+.chipEmoji {
+  font-size: 11px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.chipText {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #2c2c3e;
+  font-weight: 600;
+  font-size: 10px;
+}
+
+.chipText.completedText {
+  text-decoration: line-through;
+  color: #777;
+}
+
+.chipTime {
+  font-size: 8px;
+  color: #777;
+  flex-shrink: 0;
+  font-weight: 600;
+}
+
+/* Görev Çipi */
+.taskChip {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 4px;
+  border-radius: 6px;
+  background: #f4f5f8;
+  font-size: 10px;
+  overflow: hidden;
+  transition: opacity 0.15s;
+}
+
+.taskChip.completed {
+  opacity: 0.45;
+  background: #eeeeee;
+}

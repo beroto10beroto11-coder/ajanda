@@ -1,0 +1,266 @@
+.widget {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+  border: 1px solid #e8e8f2;
+  box-shadow: 0 4px 16px rgba(108, 99, 255, 0.06);
+  transition: all 0.2s ease;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.iconBadge {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #6c63ff 0%, #8b85ff 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  box-shadow: 0 4px 10px rgba(108, 99, 255, 0.25);
+  flex-shrink: 0;
+}
+
+.titleBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.widgetTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0;
+}
+
+.dateSub {
+  font-size: 11px;
+  color: #8e8e93;
+  font-weight: 500;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.liveClock {
+  font-size: 12px;
+  font-weight: 700;
+  color: #6c63ff;
+  background: #f0eeff;
+  padding: 3px 8px;
+  border-radius: 8px;
+  font-variant-numeric: tabular-nums;
+}
+
+.toggleBtn {
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  color: #999;
+  cursor: pointer;
+  padding: 4px;
+}
+
+/* İlerleme Çubuğu */
+.progressContainer {
+  margin-top: 10px;
+  margin-bottom: 12px;
+}
+
+.progressInfo {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 600;
+  color: #777;
+  margin-bottom: 4px;
+}
+
+.progressBar {
+  height: 6px;
+  background: #f0f0f5;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #10b981 0%, #4ecdc4 100%);
+  border-radius: 6px;
+  transition: width 0.3s ease;
+}
+
+/* Görev Listesi */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 180px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  padding-right: 2px;
+}
+
+.emptyState {
+  font-size: 12px;
+  color: #aaa;
+  text-align: center;
+  padding: 10px 0;
+  font-style: italic;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 10px;
+  border-radius: 10px;
+  background: #f8f8fc;
+  border-left: 3px solid #6c63ff;
+  transition: background 0.15s;
+}
+
+.item.completed {
+  opacity: 0.5;
+  background: #f2f2f5;
+  border-left-color: #10b981;
+}
+
+.itemLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+.tick {
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  border: 1.5px solid #6c63ff;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: transparent;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 0;
+  flex-shrink: 0;
+  transition: all 0.15s;
+}
+
+.tick.ticked {
+  background: #10b981;
+  border-color: #10b981;
+  color: #fff;
+}
+
+.itemText {
+  font-size: 12px;
+  font-weight: 600;
+  color: #2a2a3a;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.itemText.lineThrough {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.itemRight {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.timeBadge {
+  font-size: 10px;
+  font-weight: 600;
+  color: #6c63ff;
+  background: #fff;
+  padding: 2px 5px;
+  border-radius: 4px;
+  border: 1px solid #e2e2ec;
+}
+
+.removeBtn {
+  background: transparent;
+  border: none;
+  color: #bbb;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0 4px;
+}
+
+.removeBtn:hover {
+  color: #ff4757;
+}
+
+/* Hızlı Görev Ekleme Kutusu */
+.quickInputRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px dashed #f0f0f5;
+}
+
+.quickInput {
+  flex: 1;
+  background: #f5f5f9;
+  border: 1px solid #e8e8ee;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 12px;
+  color: #333;
+  outline: none;
+}
+
+.quickInput:focus {
+  border-color: #6c63ff;
+  background: #fff;
+}
+
+.quickAddBtn {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  border: none;
+  background: #6c63ff;
+  color: #fff;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.quickAddBtn:active {
+  transform: scale(0.92);
+}
