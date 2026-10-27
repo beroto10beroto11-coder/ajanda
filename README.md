@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📱 Ajanda - Mobil Uyumlu Takvim & Günlük Akış
 
-## Getting Started
+Modern, sade ve mobil öncelikli kişisel takvim, alışkanlık ve ajanda web uygulaması.
 
-First, run the development server:
+---
+
+## 🚀 Özellikler
+
+- **📅 3 Haftalık Ferah Takvim Görünümü:** Aydaki tüm günleri sıkışık göstermek yerine, Pazartesiden Pazara tam 3 haftayı (21 gün) büyük ve dokunmatik uyumlu hücrelerle gösterir.
+- **✓ Görev & Rutin Tikleme (Tamamlandı Durumu):** Etkinliklerin ve görevlerin yanındaki kutucuklara tıklayarak yapılan işleri işaretleme.
+- **🕒 24 Saatlik Günlük Akış Modalı:** Her günün üzerindeki saat simgesine dokunulduğunda 00:00 - 23:00 saatlik program açılır, gün bugünse anlık kırmızı zaman çizgisi ("Şimdi") gösterilir.
+- **🔁 Haftalık Tekrarlayan Rutinler:** Rutin eklerken haftanın hangi günleri yapılacağını (örn: Pzt, Çar, Cum) seçerek tüm haftalara otomatik dağıtma.
+- **📋 Bugünün Widget'ı (To-Do Listesi):** Takvimin hemen üzerinde günün görevleri, tamamlanma ilerleme çubuğu (% yüzdesi) ve hızlı görev ekleme kutusu.
+- **🔔 Canlı Saat & Melodik Hatırlatıcı / Alarm:** Web Audio API ile harici dosya gerektirmeyen melodik zil sesi, tarayıcı bildirimleri ve ekran üstü animasyonlu alarm kartı.
+- **💾 Mobil Güvenli Depolama (Yedekleme & Geri Yükleme):** Verileri tek tıkla `.json` olarak indirme ve dilediğiniz telefondan/tarayıcıdan geri yükleme.
+- **📲 PWA (Progressive Web App):** App Store / Play Store gerekmeden telefon tarayıcısından tek tıkla "Ana Ekrana Ekle" özelliği.
+
+---
+
+## 🛠️ Teknolojiler
+
+- **Next.js 16 (App Router & Turbopack)**
+- **React 19**
+- **TypeScript**
+- **@dnd-kit** (Sürükle & Bırak Desteği)
+- **Web Audio API** (Sentezlenmiş Melodik Çan)
+- **HTML5 Web Notifications & PWA Manifest**
+
+---
+
+## 💻 Yerel Kurulum & Çalıştırma
 
 ```bash
+# Bağımlılıkları yükleyin
+npm install
+
+# Geliştirici sunucusunu başlatın
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Tarayıcınızda açın:
+# http://localhost:3000
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
